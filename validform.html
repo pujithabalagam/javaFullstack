@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+   
+    <fieldset>
+  <h2 align="center" style="color: deeppink;"><u>Registration Form</u></h2>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label>Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <span id="nameError" class="error"></span><br>
+
+    <label>Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <span id="passwordError" class="error"></span><br><br>
+
+    <label>Number:</label><br>
+    <input type="number" id="number" name="number"><br>
+    <span id="numberError" class="error"></span><br><br>
+
+    <input type="submit" value="Register">
+  </form>
+
+  <script>
+    function validateForm() {
+      let isValid = true;
+
+    
+      document.getElementById("nameError").innerText = "";
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("passwordError").innerText = "";
+      document.getElementById("numberError").innerText = "";
+
+
+    
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const number = document.getElementById("number").value.trim();
+
+      
+      if (name === "") {
+        document.getElementById("nameError").innerText = "Name is required.";
+        isValid = false;
+      }
+
+    
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required.";
+        isValid = false;
+      } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerText = "Invalid email format.";
+        isValid = false;
+      }
+
+      
+      if (password === "") {
+        document.getElementById("passwordError").innerText = "Password is required.";
+        isValid = false;
+      } else if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+        isValid = false;
+      }
+
+        if (number === "") {
+        document.getElementById("numberError").innerText = "Number is required.";
+        isValid = false;
+      } else if (password.length < 10) {
+        document.getElementById("numberError").innerText = "Number must be at least 10 characters.";
+        isValid = false;
+      }
+      
+      return isValid;
+    }
+  </script>
+</fieldset>
+   
+</body>
+</html>
