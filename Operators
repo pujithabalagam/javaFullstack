@@ -1,0 +1,166 @@
+//
+class Arithmetic{
+    public static void main(String[] args)
+    {
+	int a=20;
+	int b=30;
+	System.out.println(a+b);
+	System.out.println(a-b);
+	System.out.println(a*b);
+	System.out.println(a/b);
+	System.out.println(a%b);
+    }
+}
+
+class Assignment{
+    public static void main(String[] args)
+    {
+	int a=20;
+	int b=30;
+	System.out.println(a+=b);
+	System.out.println(a-=b);
+	System.out.println(a*=b);
+	System.out.println(a/=b);
+	System.out.println(a%=b);
+    }
+}
+
+import java.util.Scanner;
+
+import java.io.*;
+
+class EqualOrNot{
+
+    public static void main(String[] args){
+
+	Scanner sc=new Scanner(System.in);
+
+	int a=sc.nextInt();
+
+	int b=sc.nextInt();
+
+	if(a==b){
+
+	    System.out.println("Equal");
+
+	}
+
+        else{
+
+	    System.out.println("Not Equal");
+
+	}
+
+    }
+
+}
+
+
+
+class Logical{
+
+    public static void main(String[] args)
+
+    {
+
+	boolean a=true;
+
+	boolean b=false;
+
+	System.out.println(a && b);
+
+	System.out.println(a || b);
+
+	System.out.println(!a);
+
+    }
+
+}
+
+class Relational{
+
+    public static void main(String[] args)
+
+    {
+
+	int a=20;
+
+	int b=30;
+
+	System.out.println(a==b);
+
+	System.out.println(a!=b);
+
+	System.out.println(a>b);
+
+	System.out.println(a<b);
+
+	System.out.println(a>=b);
+
+	System.out.println(a<=b);
+
+    }
+
+}
+
+	import java.util.Scanner;
+
+import java.io.*;
+
+class SmallorLarge{
+
+    public static void main(String[] args){
+
+	Scanner sc=new Scanner(System.in);
+
+	int a=sc.nextInt();
+
+	int b=sc.nextInt();
+
+	if(a>b){
+
+	    System.out.println(+a +" is larger");
+
+	    System.out.println(+b +" is smaller");
+
+	}
+
+        else{
+
+	    System.out.println(+b +" is larger");
+
+	    System.out.println(+a +" is smaller");
+
+	}
+
+    }
+
+}
+
+
+class Unary{
+
+    public static void main(String[] args)
+
+    {
+
+	int a=20;
+
+	int b=30;
+
+	System.out.println(a++);
+
+	System.out.println(++a);
+
+
+
+	System.out.println(b++);
+
+	System.out.println(++b);
+
+    }
+
+}
+
+//
+	
